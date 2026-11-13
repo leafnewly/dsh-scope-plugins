@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "Plugin Scopes",
+    "description": "Switch plugins on or off independently for each workspace and conversation, with inheritance and saved archives."
+  },
+  "panel": "Plugin Scopes",
+  "tab": "Plugin Scopes",
+  "guide": "View and switch plugins per workspace / conversation"
+}

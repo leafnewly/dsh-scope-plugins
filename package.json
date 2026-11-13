@@ -1,0 +1,53 @@
+{
+  "name": "dsh-scope-plugins",
+  "version": "0.2.0",
+  "description": "Per-workspace and per-conversation plugin switches with inheritance, archives, and a sidebar panel.",
+  "type": "module",
+  "license": "MIT",
+  "author": "leafnewly",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leafnewly/dsh-scope-plugins.git"
+  },
+  "homepage": "https://github.com/leafnewly/dsh-scope-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/leafnewly/dsh-scope-plugins/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "deepseek-harness",
+    "plugin-manager"
+  ],
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

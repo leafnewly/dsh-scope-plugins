@@ -1,0 +1,6 @@
+# Scope Plugins — per-workspace / per-session plugin switches.
+# One row: the host half is index.js, the browser half is client.js.
+- insert:
+    - id: scope-plugins
+      name: 'dsh-scope-plugins'
+      config: {}
