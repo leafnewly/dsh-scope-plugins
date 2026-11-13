@@ -6,6 +6,8 @@ Switch plugins on or off **per workspace** and **per conversation**, with inheri
 
 ![Panel](assets/panel.png)
 
+![Guide entry](assets/guide.png)
+
 ## English
 
 ### What it does
