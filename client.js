@@ -20,6 +20,10 @@ window.__ModuleLoader__.load({
     const PANEL_ID = 'scope-plugins'
     const NS = 'scopePlugins'
     const TAB_KIND = 'scope-plugins'
+    const NAME_ZH = '插件分区系统'
+    const NAME_EN = 'Plugin Scopes'
+    const GUIDE_ZH = '按工作区 / 对话查看与切换插件'
+    const GUIDE_EN = 'View and switch plugins per workspace / conversation'
 
     const colors = {
       primary: 'var(--dsw-alias-label-primary)',
@@ -391,7 +395,7 @@ window.__ModuleLoader__.load({
         return h(
           'div',
           { style: { padding: 16, fontSize: 12, color: colors.tertiary } },
-          error ? `插件开关不可用：${error}` : '正在读取插件开关…',
+          error ? `${NAME_ZH}不可用：${error}` : `正在读取${NAME_ZH}…`,
         )
       }
 
@@ -431,7 +435,7 @@ window.__ModuleLoader__.load({
         h(
           'div',
           { style: { display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 } },
-          h(Text, { size: 15, weight: 600 }, '插件开关'),
+          h(Text, { size: 15, weight: 600 }, NAME_ZH),
           h(Text, { size: 11, color: colors.tertiary }, busy ? '同步中…' : '按工作区 / 会话'),
         ),
         error ? h(Text, { size: 11, color: 'var(--dsw-alias-state-error-primary, #d05555)' }, error) : null,
@@ -739,23 +743,23 @@ window.__ModuleLoader__.load({
         () =>
           ctx.locale.register(NS, {
             zh: {
-              panel: '插件开关',
-              tab: '插件开关',
-              guide: '按工作区 / 会话查看与切换插件',
+              panel: NAME_ZH,
+              tab: NAME_ZH,
+              guide: GUIDE_ZH,
             },
             en: {
-              panel: 'Plugin Scopes',
-              tab: 'Plugin Scopes',
-              guide: 'Per-workspace and per-session plugin switches',
+              panel: NAME_EN,
+              tab: NAME_EN,
+              guide: GUIDE_EN,
             },
           }),
         'scope-plugins locale',
       )
 
       const FALLBACK = {
-        panel: '插件开关',
-        tab: '插件开关',
-        guide: '按工作区 / 会话查看与切换插件',
+        panel: NAME_ZH,
+        tab: NAME_ZH,
+        guide: GUIDE_ZH,
       }
 
       const t = (key) => {
